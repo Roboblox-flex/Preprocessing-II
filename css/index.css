@@ -204,8 +204,33 @@ header {
   font-size: 1.6rem;
   padding: 20px;
 }
-img {
-  width: 50%;
+.bus-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.bus-box img {
+  width: 42%;
+}
+.welcome-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.welcome-box .welcome {
+  border-bottom: 2px dashed #C0C0C0;
+  width: 42%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+hr {
+  border: 1px solid black;
+  margin-right: 29%;
+  margin-left: 29%;
 }
 .home .content-section {
   margin: 30px 0;
