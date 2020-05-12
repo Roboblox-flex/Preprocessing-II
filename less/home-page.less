@@ -1,44 +1,51 @@
 .bus-box {
-  .flex(center, center, row);
-  img {
-    width: 42%;
-  }
+  .flex-mixin(center, center, row);
 }
 .welcome-box {
-  .flex(center,center, row);
+  .flex-mixin(center,center, row);
   .welcome {
     border-bottom: 2px dashed @navigation-border;
     width: 100%;
     margin-top: 2rem;
-    .flex(flex-start, center, column);
+    .flex-mixin(flex-start, center, column);
     p {
       margin-top: 1rem;
     }
   }
 }
-hr {
-  border: 1px solid black;
-  margin-right: 29%;
-  margin-left: 29%;
-}
 .home {
   .content-section {
+    border: 1px solid black;
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      .flex-mixin(center, center, column);
+    }
 
     .text-content {
       width: 48%;
+      @media @mobile {
+        width: 100%;
+      }
       padding-right: 1%;
     }
 
     .img-content {
+      border: 1px solid black;
       width: 48%;
+      @media @mobile {
+        width: 100%;
+      }
       padding-left: 1%;
 
       img {
-        border-radius: 10px;
+        border-radius: 1rem;
+        @media @mobile {
+          border-radius: 5rem;
+          width: 100%;
+        }
       }
     }
   }
@@ -46,6 +53,9 @@ hr {
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      .flex-mixin(center, center, column-reverse);
+    }
 
     .text-content {
       padding-left: 1%;
@@ -54,28 +64,41 @@ hr {
 
     .img-content {
       padding-right: 1%;
-      padding-left: 0;
+      @media @mobile {
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
     img {
       border-radius: 10px;
     }
   }
 
   .content-pick {
+    border: 1px solid black;
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn {
+        .flex-mixin(center, center, row);
+        .btn-mixin(white, teal);
+      }
+      @media @mobile {
+        width: 80%;
+      }
     }
   }
 } // home

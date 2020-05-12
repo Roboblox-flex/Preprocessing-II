@@ -1,18 +1,20 @@
 // Navigation Styles here
 header {
-  .flex(center, space-between,row);
-}
-.h1-box {
-  border: 1px solid black;
+  .flex-mixin(center, space-between,row);
+  @media @mobile {
+    flex-direction: column;
+  }
 }
 .links {
-  border: 1px solid black;
   width: 45%;
   height: 10vh;
   font-size: 1.8rem;
-  .flex (center, space-between, row);
+  .flex-mixin (center, space-between, row);
   a {
     text-decoration: none;
     color: black;
+  }
+  @media @mobile {
+    width: 85%;
   }
 }
