@@ -134,14 +134,15 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   font-size: 4rem;
@@ -176,13 +177,11 @@ header {
 }
 .h1-box {
   border: 1px solid black;
-  margin-left: 29%;
 }
 .links {
   border: 1px solid black;
-  width: 20%;
+  width: 45%;
   height: 10vh;
-  margin-right: 29%;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
@@ -221,11 +220,15 @@ header {
 }
 .welcome-box .welcome {
   border-bottom: 2px dashed #C0C0C0;
-  width: 42%;
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+.welcome-box .welcome p {
+  margin-top: 1rem;
 }
 hr {
   border: 1px solid black;
