@@ -1,12 +1,13 @@
 // Navigation Styles here
 header {
-  .flex-mixin(center, space-between,row);
+  border-bottom: 2px dashed @navigation-border;
+  .flex-mixin(center, space-around,row);
   @media @mobile {
     flex-direction: column;
   }
 }
-.links {
-  width: 45%;
+nav {
+  width: 30%;
   height: 10vh;
   font-size: 1.8rem;
   .flex-mixin (center, space-between, row);
